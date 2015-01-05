@@ -1,9 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <h2><strong>Task:</strong></h2>
   <%= @task.name %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<% if @task.sessions.any? %>
+      <h3>Sessions</h3>
+      <ul class="sessions">
+        <%= render @sessions %>
+      </ul>
+<% end %>
+
+<%= link_to 'Back', root_path %>

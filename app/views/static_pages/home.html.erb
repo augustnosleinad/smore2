@@ -1,9 +1,18 @@
 <% provide(:title, "Tasks") %>
 <div>
-	<%= @task.name %>
-	<% if @task.sessions.any? %>
-		<ul class="microposts">
-        	<%= render @sessions %>
-      	</ul>
-     <% end %>
+	<h1>Welcome to Smore!</h1>
+	<h2>A tasty to_do_list/timetracker app</h2>
+	<hr>
+</div>
+
+<div>
+	<h3>Tasks in progress: </h3>
+	<% if @tasks.any? %>
+		<ul class="tasks">
+        	<%= render @tasks %>
+	    </ul>
+	<% end %>
+	<ul>
+		<li><%= link_to "Add a task", new_task_path %></li>
+	</ul>
 </div>

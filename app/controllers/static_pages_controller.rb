@@ -1,9 +1,12 @@
 class StaticPagesController < ApplicationController
   def home
-  	@task = Task.first
-  	@sessions = @task.sessions
+  	@tasks = Task.all
   end
 
   def chart
+  	#task = set_task
+  	#@sessions = task.sessions
   end
+
+
 end

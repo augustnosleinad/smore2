@@ -1,7 +1,5 @@
 <li id="session-<%= session.id %>">
-  <span class="user"><%= link_to session.task.name, session.task %></span>
-  <span class="content"><%= session.duration %></span>
-  <span class="timestamp">
-    Performed <%= time_ago_in_words(session.created_at) %> ago.
+  <span class="content">Worked on for <%= session.duration %> minutes</span>
+  <span class="timestamp"><%= time_ago_in_words(session.created_at) %> ago.
   </span>
 </li>

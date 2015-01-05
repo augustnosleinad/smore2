@@ -1,0 +1,6 @@
+<li id="task-<%= task.id %>">
+  <span><%= link_to task.name, task %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(task.created_at) %> ago.
+  </span>
+</li>
