@@ -12,4 +12,10 @@
       </ul>
 <% end %>
 
+<p>total: <%= @total %> minutes</p>
+
+<progress value="<%= @total %>" max="<%= @target_duration %>"></progress>
+<hr>
+<%= link_to 'Add session', new_session_path %>
+
 <%= link_to 'Back', root_path %>

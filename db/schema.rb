@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141224172435) do
+ActiveRecord::Schema.define(version: 20150106171825) do
 
   create_table "sessions", force: true do |t|
     t.integer  "duration"
@@ -22,8 +22,9 @@ ActiveRecord::Schema.define(version: 20141224172435) do
 
   create_table "tasks", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "estimated_time"
   end
 
 end

@@ -12,6 +12,8 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
     @sessions = @task.sessions
+    @total = @sessions.sum("duration")
+    @target_duration = @task.estimated_time
   end
 
   # GET /tasks/new
